@@ -1,0 +1,18 @@
+img {border: 5px solid #000000;border-left: 5px solid #000000;border-right:5px solid #000000;margin: 10px/auto;display: block;}
+body { margin: 0;padding: 0;min-height: 100vh;background: linear-gradient(to bottom, #87CEEB 0%, #E0F7FA 100%);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;line-height: 1.6;overflow-x: hidden;position: relative;}
+.cloud {position: fixed;background: white;border-radius: 50px;opacity: 0.8;animation: cloudMove 25s linear infinite;}
+
+.cloud::before, .cloud::after { content: ''; position: absolute; background: white; border-radius: 50%;}
+
+.cloud::before { width: 50px; height: 50px; top: -25px; left: 15px;}
+
+.cloud::after {width: 70px;height: 70px;top: -35px;left: 35px;}
+
+.cloud:nth-child(1) { width: 120px; height: 40px; top: 10%; animation-delay: 0s; }
+.cloud:nth-child(2) { width: 100px; height: 35px; top: 25%; animation-delay: -3s; animation-duration: 10s; }
+.cloud:nth-child(3) { width: 140px; height: 45px; top: 15%; animation-delay: -6s; animation-duration: 15s; } 
+
+@keyframes cloudMove {0% { left: -200px; }100% { left: 100%; }}
+img:hover {transform: scale(1.02);box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);}
+body{margin:0;padding:20px;display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
